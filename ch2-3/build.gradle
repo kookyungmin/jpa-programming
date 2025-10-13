@@ -1,0 +1,13 @@
+plugins {
+    id 'application'
+}
+
+dependencies {
+    //하이버네이트 6버전 부터 core + entitymanager 통합 -> hibernate-core 만 있어도 충분
+    implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+    implementation 'com.h2database:h2:2.1.214'
+//    implementation 'ch.qos.logback:logback-classic:1.4.11'
+
+    testImplementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+    testImplementation 'com.h2database:h2:2.1.214'
+}

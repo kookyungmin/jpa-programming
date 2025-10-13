@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.1">
+<!--    영속성 유닛 (일반적으로 연결할 데이터베이스당 하나의 영속성 유닛을 등록)-->
+    <persistence-unit name="happykoo">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>net.happykoo.jpa.entity.Member</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:tcp://localhost:9092/~/test"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+
+<!--            6.x 버전부터 제거 ID 생성 전략은 @GeneratedValue(strategy = GenerationType.IDENTITY) 같은 표준 JPA 방식 사용하면 됨-->
+<!--            <property name="hibernate.id.new_generator_mappings" value="true"/>-->
+        </properties>
+    </persistence-unit>
+</persistence>

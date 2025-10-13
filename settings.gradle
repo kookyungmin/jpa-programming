@@ -1,2 +1,3 @@
 rootProject.name = 'jpa-programming'
+include 'ch2-3'
 
