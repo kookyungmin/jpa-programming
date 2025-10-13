@@ -1,4 +1,4 @@
-package net.happykoo.jpa;
+package net.happykoo.jpa.ch2_3;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class JpaTest {
+public class EntityManagerTest {
     @Test
     @DisplayName("EntityManger 예제 테스트")
     public void test1() {

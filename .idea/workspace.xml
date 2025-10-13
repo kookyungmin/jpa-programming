@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d35a4848-0606-463a-b5ea-14a09ecb427a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch2-3/src/test/java/net/happykoo/jpa/JpaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch2-3/src/test/java/net/happykoo/jpa/JpaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch2-3/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch2-3/src/main/java/net/happykoo/jpa/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/entity/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch2-3/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch2-3/src/test/java/net/happykoo/jpa/JpaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/ch2_3/EntityManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +230,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760323880789</updated>
-      <workItem from="1760323881943" duration="10315000" />
+      <workItem from="1760323881943" duration="10604000" />
     </task>
     <servers />
   </component>
