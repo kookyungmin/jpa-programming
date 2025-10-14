@@ -16,6 +16,7 @@ public class EntityMappingTest {
             pc.runTransaction(em -> {
                 Member member = Member.builder()
                         .userName("happykoo")
+                        .age(33)
                         .build();
                 //IDENTITY 전략은 데이터베이스에 데이터가 생성되어야 식별자가 생성되므로 해당 경우는 트랜잭션 쓰기 지연 동작 X
                 em.persist(member);

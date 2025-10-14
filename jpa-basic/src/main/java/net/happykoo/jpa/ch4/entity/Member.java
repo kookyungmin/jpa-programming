@@ -30,6 +30,7 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private RoleType roleType;
 
+    //필드 타입이 문자면 CLOB, 아니면 BLOB
     @Lob
     private String description;
 
