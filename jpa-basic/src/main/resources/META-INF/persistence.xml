@@ -7,6 +7,8 @@
         <class>net.happykoo.jpa.ch2_3.entity.Member</class>
         <class>net.happykoo.jpa.ch4.entity.Member</class>
         <class>net.happykoo.jpa.ch4.entity.Board</class>
+        <class>net.happykoo.jpa.ch5.entity.Member</class>
+        <class>net.happykoo.jpa.ch5.entity.Team</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>

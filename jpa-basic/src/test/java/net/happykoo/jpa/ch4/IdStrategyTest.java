@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EntityMappingTest {
+public class IdStrategyTest {
     @Test
     @DisplayName("ID 생성 전략 : IDENTITY")
     public void test1() {

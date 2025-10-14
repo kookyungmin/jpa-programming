@@ -38,6 +38,7 @@ public class PersistenceContextHandler implements AutoCloseable {
         } catch (Exception e) {
             if (tx != null) {
                 tx.rollback();
+                throw new RuntimeException(e);
             }
         }
     }
