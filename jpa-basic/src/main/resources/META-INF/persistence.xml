@@ -4,7 +4,10 @@
 <!--    영속성 유닛 (일반적으로 연결할 데이터베이스당 하나의 영속성 유닛을 등록)-->
     <persistence-unit name="happykoo">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>net.happykoo.jpa.entity.Member</class>
+        <class>net.happykoo.jpa.ch2_3.entity.Member</class>
+        <class>net.happykoo.jpa.ch4.entity.Member</class>
+        <class>net.happykoo.jpa.ch4.entity.Board</class>
+
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:tcp://localhost:9092/~/test"/>
@@ -15,10 +18,20 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="validate"/>
 
-<!--            6.x 버전부터 제거 ID 생성 전략은 @GeneratedValue(strategy = GenerationType.IDENTITY) 같은 표준 JPA 방식 사용하면 됨-->
-<!--            <property name="hibernate.id.new_generator_mappings" value="true"/>-->
+<!--        create: 애플리케이션 실행 시점에 데이터베이스 테이블 자동 생성 (개발용)  -->
+<!--        update: 애플리케이션 실행 시점에 변경된 엔티티 기반으로 데이터베이스 테이블 자동 수정 (개발용) -->
+<!--        validate: 일치 여부만 검증  -->
+<!--        운영 서버에서는 validate 나 none 사용-->
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+
+<!--        6.x 버전부터 제거 ID 생성 전략은 @GeneratedValue(strategy = GenerationType.IDENTITY) 같은 표준 JPA 방식 사용하면 됨-->
+<!--        <property name="hibernate.id.new_generator_mappings" value="true"/>-->
+
+<!--        카멜 케이스를 스네이크 케이스로 변환 -->
+<!--        6.x 버전에선 deprecated-->
+<!--        <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>-->
+            <property name="hibernate.physical_naming_strategy" value="org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy"/>
         </properties>
     </persistence-unit>
 </persistence>
