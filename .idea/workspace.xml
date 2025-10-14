@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d35a4848-0606-463a-b5ea-14a09ecb427a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/constant/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch5/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch5/entity/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/PersistenceContextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/PersistenceContextHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/ch4/EntityMappingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/ch4/IdStrategyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +117,7 @@
       <command value="gradle runH2Server" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.EntityMappingTest">
+  <component name="RunManager" selected="Gradle.Tests in 'jpa-programming.jpa-basic.test'">
     <configuration name="EntityManagerTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -206,7 +210,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'net.happykoo.jpa'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'jpa-programming.jpa-basic.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,8 +222,6 @@
         <option name="taskNames">
           <list>
             <option value=":jpa-basic:test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -240,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'jpa-programming.jpa-basic.test'" />
         <item itemvalue="Gradle.EntityMappingTest" />
         <item itemvalue="Gradle.EntityManagerTest.test2" />
         <item itemvalue="Gradle.EntityMappingTest.test2 (1)" />
         <item itemvalue="Gradle.EntityMappingTest.test1 (1)" />
-        <item itemvalue="Gradle.Tests in 'net.happykoo.jpa'" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +258,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760323880789</updated>
-      <workItem from="1760323881943" duration="27986000" />
+      <workItem from="1760323881943" duration="30192000" />
     </task>
     <servers />
   </component>
