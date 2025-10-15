@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//복합키 매핑 -> 보통 복합키를 사용하면 복잡하므로 매핑엔티티에 기본키를 두고 외래키로 참조한다.
+//복합키 매핑(식별관계) -> 보통 복합키를 사용하면 복잡하므로 매핑엔티티에 기본키를 두고 외래키로 참조한다.(비식별관계)
 @IdClass(ContractId.class)
 public class Contract {
     @Id
