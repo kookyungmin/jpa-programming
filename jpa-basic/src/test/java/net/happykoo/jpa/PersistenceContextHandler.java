@@ -23,10 +23,12 @@ public class PersistenceContextHandler implements AutoCloseable {
         //3. 변경 감지 -> 엔티티의 변경사항을 데이터베이스에 자동으로 반영 -> 엔티티의 최초상태를 스냅샷으로 저장 -> flush 시점에 스냅샷과 엔티티를 비교해서 변경된 엔티티 찾음
         //위의 모든 작업은 EntityManager 의 생명주기 동안에만 유지된다.
 
-        EntityTransaction tx = null;
+        //주의: try-with-resources 를 사용하면 exception 되기전에 EntityManager close 되어버림
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
         //엔티티 매니저 팩토리 생성 (원래 엔티티 매니저 팩토리는 생성 비용이 크기에 싱글턴으로 관리)
         //엔티티 매니저 생성 -> 엔티티를 데이터베이스에 등록/수정/삭제/조회할 수 있음 -> 스레드 간 공유해서는 안됨
-        try(EntityManager em = emf.createEntityManager()) {
+        try {
             tx = em.getTransaction();
 
             tx.begin();
@@ -36,9 +38,13 @@ public class PersistenceContextHandler implements AutoCloseable {
             tx.commit();
 
         } catch (Exception e) {
-            if (tx != null) {
+            if (tx != null && tx.isActive()) {
                 tx.rollback();
-                throw new RuntimeException(e);
+            }
+            throw new RuntimeException(e.getMessage());
+        } finally {
+            if (em.isOpen()) {
+                em.close();
             }
         }
     }

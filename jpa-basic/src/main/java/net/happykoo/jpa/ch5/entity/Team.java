@@ -3,11 +3,10 @@ package net.happykoo.jpa.ch5.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table
+@Entity(name = "TeamV1")
+@Table(name = "V1_TEAM")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

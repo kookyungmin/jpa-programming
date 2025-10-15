@@ -9,6 +9,12 @@
         <class>net.happykoo.jpa.ch4.entity.Board</class>
         <class>net.happykoo.jpa.ch5.entity.Member</class>
         <class>net.happykoo.jpa.ch5.entity.Team</class>
+        <class>net.happykoo.jpa.ch6.entity.Member</class>
+        <class>net.happykoo.jpa.ch6.entity.Team</class>
+        <class>net.happykoo.jpa.ch6.entity.Locker</class>
+        <class>net.happykoo.jpa.ch6.entity.Product</class>
+        <class>net.happykoo.jpa.ch6.entity.Company</class>
+        <class>net.happykoo.jpa.ch6.entity.Contract</class>
 
 <!--        <class>net.happykoo.jpa.example.entity.User</class>-->
 <!--        <class>net.happykoo.jpa.example.entity.Order</class>-->
