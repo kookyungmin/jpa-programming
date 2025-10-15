@@ -20,6 +20,8 @@
 <!--        <class>net.happykoo.jpa.example.entity.Order</class>-->
 <!--        <class>net.happykoo.jpa.example.entity.OrderItem</class>-->
 <!--        <class>net.happykoo.jpa.example.entity.Item</class>-->
+<!--        <class>net.happykoo.jpa.example.entity.Category</class>-->
+<!--        <class>net.happykoo.jpa.example.entity.Delivery</class>-->
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>

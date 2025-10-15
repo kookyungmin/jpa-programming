@@ -32,6 +32,10 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems;
 
+    @OneToOne
+    @JoinColumn(name = "DELIVERY_ID")
+    private Delivery delivery;
+
     //연관 관계 메서드
     public void setUser(User user) {
         Optional.ofNullable(this.user)
