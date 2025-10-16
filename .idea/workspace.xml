@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d35a4848-0606-463a-b5ea-14a09ecb427a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/OrderItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,8 +114,8 @@
       <command value="gradle runH2Server" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.InheritMappingTest.test1">
-    <configuration name="EntityMappingTest.test4" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CascadeTest.test2">
+    <configuration name="CascadeTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -128,7 +128,30 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch6.EntityMappingTest.test4&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch8.CascadeTest.test1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CascadeTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jpa-basic:test" />
+            <option value="--tests" />
+            <option value="&quot;net.happykoo.jpa.ch8.CascadeTest.test2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -161,7 +184,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="InheritMappingTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ProxyTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -174,7 +197,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch7.InheritMappingTest.test2&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch8.ProxyTest.test1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -184,28 +207,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'jpa-programming.jpa-basic.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":jpa-basic:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in 'net.happykoo.jpa'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ProxyTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,7 +220,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.*&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch8.ProxyTest.test2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -239,11 +241,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CascadeTest.test2" />
+        <item itemvalue="Gradle.CascadeTest.test1" />
+        <item itemvalue="Gradle.ProxyTest.test2" />
+        <item itemvalue="Gradle.ProxyTest.test1" />
         <item itemvalue="Gradle.InheritMappingTest.test1" />
-        <item itemvalue="Gradle.InheritMappingTest.test2" />
-        <item itemvalue="Gradle.Tests in 'jpa-programming.jpa-basic.test'" />
-        <item itemvalue="Gradle.EntityMappingTest.test4" />
-        <item itemvalue="Gradle.Tests in 'net.happykoo.jpa'" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +257,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760323880789</updated>
-      <workItem from="1760323881943" duration="45686000" />
+      <workItem from="1760323881943" duration="52603000" />
     </task>
     <servers />
   </component>
