@@ -15,6 +15,10 @@
         <class>net.happykoo.jpa.ch6.entity.Product</class>
         <class>net.happykoo.jpa.ch6.entity.Company</class>
         <class>net.happykoo.jpa.ch6.entity.Contract</class>
+        <class>net.happykoo.jpa.ch7.entity.Book</class>
+        <class>net.happykoo.jpa.ch7.entity.Goods</class>
+        <class>net.happykoo.jpa.ch7.entity.Food</class>
+        <class>net.happykoo.jpa.ch7.entity.Chicken</class>
 
 <!--        <class>net.happykoo.jpa.example.entity.User</class>-->
 <!--        <class>net.happykoo.jpa.example.entity.Order</class>-->

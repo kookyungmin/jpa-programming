@@ -5,7 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 
 public class PersistenceContextHandler implements AutoCloseable {
     private final EntityManagerFactory emf;
@@ -16,7 +16,7 @@ public class PersistenceContextHandler implements AutoCloseable {
         this.emf = Persistence.createEntityManagerFactory(unitName);
     }
 
-    public void runTransaction(Consumer<EntityManager> fn) {
+    public void runTransaction(BiConsumer<EntityManager, EntityTransaction> fn) {
         //Persistence Context 장점
         //1. 1차 캐시 -> Entity 들을 @Id 기반으로 1차 캐시로 관리하여 find 로 데이터를 찾을 때, 1차캐시에서 먼저 찾은 후 없으면 데이터베이스에서 조회한다.
         //2. 트랜잭션 쓰기 지연 -> commit 전까지의 SQL 를 모아놨다가 커밋할 때 모아둔 쿼리를 데이터베이스에 보냄(flush: 데이터베이스와 동기화)
@@ -33,9 +33,11 @@ public class PersistenceContextHandler implements AutoCloseable {
 
             tx.begin();
             //메인 로직(모두 1차 캐시되고, 트랜잭션 쓰기 지연이 되어 commit 전까지는 Persistence Context 에 저장된다)
-            fn.accept(em);
+            fn.accept(em, tx);
             //commit 후에 비로소 데이터베이스로 SQL 실행
-            tx.commit();
+            if (tx != null && tx.isActive()) {
+                tx.commit();
+            }
 
         } catch (Exception e) {
             if (tx != null && tx.isActive()) {

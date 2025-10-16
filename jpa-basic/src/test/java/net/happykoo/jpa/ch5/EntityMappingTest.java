@@ -17,7 +17,7 @@ public class EntityMappingTest {
     @BeforeEach
     public void setup() {
         pc = new PersistenceContextHandler("happykoo");
-        pc.runTransaction(em -> {
+        pc.runTransaction((em, tx) -> {
             Team team = Team.builder()
                     .id("happyteam")
                     .name("해피팀")
@@ -45,7 +45,7 @@ public class EntityMappingTest {
     @Test
     @DisplayName("연관관계 테스트 : CRUD")
     public void test1() {
-        pc.runTransaction(em -> {
+        pc.runTransaction((em, tx) -> {
             //객체 그래프 탐색
             Member findMember1 = em.find(Member.class, "happykoo");
             assertEquals("happyteam", findMember1.getTeam().getId());
@@ -79,7 +79,7 @@ public class EntityMappingTest {
     @Test
     @DisplayName("연관관계 테스트 : 양방향 연관관계")
     public void test2() {
-        pc.runTransaction(em -> {
+        pc.runTransaction((em, tx) -> {
             Team findTeam = em.find(Team.class, "happyteam");
             assertEquals(2, findTeam.getMembers().size());
         });

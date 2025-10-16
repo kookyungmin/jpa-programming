@@ -13,7 +13,7 @@ public class IdStrategyTest {
     @DisplayName("ID 생성 전략 : IDENTITY")
     public void test1() {
         try(PersistenceContextHandler pc = new PersistenceContextHandler("happykoo")) {
-            pc.runTransaction(em -> {
+            pc.runTransaction((em, tx) -> {
                 Member member = Member.builder()
                         .userName("happykoo")
                         .age(33)
@@ -30,7 +30,7 @@ public class IdStrategyTest {
     @DisplayName("ID 생성 전략 : SEQUENCE")
     public void test2() {
         try(PersistenceContextHandler pc = new PersistenceContextHandler("happykoo")) {
-            pc.runTransaction(em -> {
+            pc.runTransaction((em, tx) -> {
                 Board board = new Board();
                 em.persist(board);
                 assertTrue(board.getId() >= 3);

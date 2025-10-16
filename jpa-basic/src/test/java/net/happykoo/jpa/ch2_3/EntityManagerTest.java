@@ -15,7 +15,7 @@ public class EntityManagerTest {
     @DisplayName("EntityManger 예제 테스트")
     public void test1() {
         try (PersistenceContextHandler pc = new PersistenceContextHandler("happykoo")) {
-            pc.runTransaction(em -> runEntityCRUD(em));
+            pc.runTransaction((em, tx) -> runEntityCRUD(em));
         }
     }
 
@@ -23,7 +23,7 @@ public class EntityManagerTest {
     @DisplayName("detach / merge 예제")
     public void test2() {
         try (PersistenceContextHandler pc = new PersistenceContextHandler("happykoo")) {
-            pc.runTransaction(em -> runEntityDetachAndMerge(em));
+            pc.runTransaction((em, tx) -> runEntityDetachAndMerge(em));
         }
     }
 

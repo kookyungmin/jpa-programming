@@ -13,7 +13,7 @@ public class EntityMappingTest {
     @DisplayName("1 : N 관계 단일관계인 경우")
     public void test1() {
         try(PersistenceContextHandler pc = new PersistenceContextHandler("happykoo")) {
-            pc.runTransaction(em -> {
+            pc.runTransaction((em, tx) -> {
                 Member m1 = Member.builder()
                         .name("happykoo")
                         .build();
@@ -43,7 +43,7 @@ public class EntityMappingTest {
     @DisplayName("1 : 1 관계 양방향 관계인 경우")
     public void test2() {
         try(PersistenceContextHandler pc = new PersistenceContextHandler("happykoo")) {
-            pc.runTransaction(em -> {
+            pc.runTransaction((em, tx) -> {
                 Member member = Member.builder()
                         .name("happykoo")
                         .build();
@@ -64,7 +64,7 @@ public class EntityMappingTest {
     @DisplayName("N:N 관계")
     public void test3() {
         try(PersistenceContextHandler pc = new PersistenceContextHandler("happykoo")) {
-            pc.runTransaction(em -> {
+            pc.runTransaction((em, tx) -> {
                 Product p1 = Product.builder()
                         .name("product 1")
                         .build();
@@ -99,7 +99,7 @@ public class EntityMappingTest {
     @DisplayName("N:N -> 매핑클래스 복합키 테스트")
     public void test4() {
         try(PersistenceContextHandler pc = new PersistenceContextHandler("happykoo")) {
-            pc.runTransaction(em -> {
+            pc.runTransaction((em, tx) -> {
                 Company c1 = Company.builder()
                         .name("company 1")
                         .build();
