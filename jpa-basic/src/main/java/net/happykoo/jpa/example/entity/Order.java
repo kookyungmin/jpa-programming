@@ -2,6 +2,7 @@ package net.happykoo.jpa.example.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import net.happykoo.jpa.ch7.entity.BaseEntity;
 import net.happykoo.jpa.example.constant.OrderStatus;
 
 import java.time.LocalDateTime;
@@ -15,7 +16,7 @@ import java.util.Optional;
 @Builder
 @Setter
 @Getter
-public class Order {
+public class Order extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long orderId;

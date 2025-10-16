@@ -26,6 +26,9 @@
 <!--        <class>net.happykoo.jpa.example.entity.Item</class>-->
 <!--        <class>net.happykoo.jpa.example.entity.Category</class>-->
 <!--        <class>net.happykoo.jpa.example.entity.Delivery</class>-->
+<!--        <class>net.happykoo.jpa.example.entity.Album</class>-->
+<!--        <class>net.happykoo.jpa.example.entity.Book</class>-->
+<!--        <class>net.happykoo.jpa.example.entity.Movie</class>-->
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>

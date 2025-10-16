@@ -2,17 +2,21 @@ package net.happykoo.jpa.example.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
+import java.lang.annotation.Inherited;
 import java.util.List;
 
 @Entity
 @Table(name = "ITEM")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "D_TYPE")
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class Item {
+@SuperBuilder
+public abstract class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long itemId;

@@ -2,6 +2,7 @@ package net.happykoo.jpa.example.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import net.happykoo.jpa.ch7.entity.BaseEntity;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class User {
+public class User extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
