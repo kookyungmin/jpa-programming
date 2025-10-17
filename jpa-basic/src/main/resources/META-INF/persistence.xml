@@ -23,6 +23,7 @@
         <class>net.happykoo.jpa.ch8.entity.Team</class>
         <class>net.happykoo.jpa.ch8.entity.Parent</class>
         <class>net.happykoo.jpa.ch8.entity.Child</class>
+        <class>net.happykoo.jpa.ch9.entity.Member</class>
 
 <!--        <class>net.happykoo.jpa.example.entity.User</class>-->
 <!--        <class>net.happykoo.jpa.example.entity.Order</class>-->
