@@ -247,7 +247,48 @@ public class JPQLTest {
             //2. 컬렉션은 별칭을 얻어야 세부 경로 탐색 가능
             //3. 묵시적 조인은 한눈에 파악하기 어렵기에 되도록 명시적 조인 사용 권장
         });
+    }
 
+    @Test
+    @DisplayName("JPQL :: 서브 쿼리")
+    public void test9() {
+        pc.runTransaction((em, tx) -> {
+            //[NOT] EXISTS (서브쿼리에 결과가 존재하면 참)
+            List<Member> result1 = em.createQuery("SELECT m FROM MemberV7 m " +
+                    "WHERE EXISTS (SELECT t FROM TeamV4 t where t.name = 'Team Alpha')", Member.class)
+                    .getResultList();
+
+            //ALL | ANY | SOME (비교 연산과 같이 쓰임, ALL 조건 모두 만족, ANY, SOME 하나라도 만족)
+            List<Order> result2 = em.createQuery("SELECT o FROM OrderV2 o " +
+                    "WHERE o.orderAmount > ALL (SELECT p.stockAmount FROM ProductV2 p)", Order.class)
+                    .getResultList();
+        });
+    }
+
+    @Test
+    @DisplayName("JPQL :: 컬렉션 식")
+    public void test10() {
+        pc.runTransaction((em, tx) -> {
+            //IS [NOT] Empty
+            List<Member> result1 = em.createQuery("SELECT m FROM MemberV7 m WHERE m.orders IS NOT EMPTY", Member.class)
+                    .getResultList();
+
+            //[NOT] MEMBER [OF] (엔티티나 값이 컬렉션에 포함되어 있으면 참)
+            List<Team> result2 = em.createQuery("SELECT t FROM TeamV4 t WHERE :memberParam MEMBER OF t.members", Team.class)
+                    .setParameter("memberParam", members.get(0))
+                    .getResultList();
+        });
+    }
+
+    @Test
+    @DisplayName("JPQL :: Named 쿼리")
+    public void test11() {
+        pc.runTransaction((em, tx) -> {
+            //Named 쿼리는 애플리케이션 로딩 시점에 JPQL 문법을 체크하고 미리 파싱해둔다. -> 오류를 빨리 확인할 수 있고, 사용하는 시점에는 파싱된 결과를 재사용하므로 성능상 이점이 있다.
+            List<Member> resultList = em.createNamedQuery("MemberV7.findByUsername", Member.class)
+                    .setParameter("username", "user_B")
+                    .getResultList();
+        });
     }
 
 

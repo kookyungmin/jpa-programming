@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity(name = "MemberV7")
+@NamedQuery(name = "MemberV7.findByUsername", query = "SELECT m FROM MemberV7 m WHERE m.username = :username")
 @Table(name = "V7_MEMBER")
 @Builder
 @NoArgsConstructor

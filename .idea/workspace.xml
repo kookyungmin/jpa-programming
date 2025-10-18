@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d35a4848-0606-463a-b5ea-14a09ecb427a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch10/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch10/entity/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/ch10/JPQLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/ch10/JPQLTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,8 +112,8 @@
       <command value="gradle runH2Server" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.JPQLTest.test8">
-    <configuration name="JPQLTest.test4" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.JPQLTest.test11">
+    <configuration name="JPQLTest.test10" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -125,7 +126,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch10.JPQLTest.test4&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch10.JPQLTest.test10&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -135,7 +136,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="JPQLTest.test5" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JPQLTest.test11" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -148,30 +149,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch10.JPQLTest.test5&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="JPQLTest.test6" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":jpa-basic:test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch10.JPQLTest.test6&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch10.JPQLTest.test11&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -227,6 +205,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="JPQLTest.test9" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jpa-basic:test" />
+            <option value="--tests" />
+            <option value="&quot;net.happykoo.jpa.ch10.JPQLTest.test9&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -238,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JPQLTest.test11" />
+        <item itemvalue="Gradle.JPQLTest.test10" />
+        <item itemvalue="Gradle.JPQLTest.test9" />
         <item itemvalue="Gradle.JPQLTest.test8" />
         <item itemvalue="Gradle.JPQLTest.test7" />
-        <item itemvalue="Gradle.JPQLTest.test6" />
-        <item itemvalue="Gradle.JPQLTest.test5" />
-        <item itemvalue="Gradle.JPQLTest.test4" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +255,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760323880789</updated>
-      <workItem from="1760323881943" duration="73335000" />
+      <workItem from="1760323881943" duration="75720000" />
     </task>
     <servers />
   </component>
