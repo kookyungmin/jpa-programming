@@ -14,8 +14,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -140,9 +139,117 @@ public class JPQLTest {
     @DisplayName("JPQL :: 집합과 정렬 예제")
     public void test5() {
         pc.runTransaction((em, tx) -> {
-            
+            Map<String, List<Member>> expectedGroupingMembers = members.stream()
+                    .sorted(Comparator.comparing(m -> m.getTeam().getName()))
+                    .collect(Collectors.groupingBy(m -> m.getTeam().getName(), LinkedHashMap::new, Collectors.toList()));
+            Set<String> expectedKeySet = expectedGroupingMembers.keySet();
+
+            List<Object[]> resultList = em.createQuery("SELECT t.name, COUNT(m.age), SUM(m.age), AVG(m.age), MAX(m.age), MIN(m.age) " +
+                    "FROM MemberV7 m LEFT JOIN m.team t " +
+                    "GROUP BY t.name " +
+                    "ORDER BY t.name")
+                    .getResultList();
+
+            int i = 0;
+            for(String expectedKey : expectedKeySet) {
+                Object[] result = resultList.get(i++);
+                assertEquals(expectedKey, result[0]);
+                assertEquals(expectedGroupingMembers.get(expectedKey)
+                        .stream()
+                        .mapToInt(Member::getAge)
+                        .max().orElse(0), result[4]);
+            }
         });
     }
+
+    @Test
+    @DisplayName("JPQL :: 내부 조인, 외부 조인 예제")
+    public void test6() {
+        pc.runTransaction((em, tx) -> {
+            String teamName = "Team Alpha";
+            //(INNER) JOIN (SQL 과 다른 점은 연관관계에 있는 객체를 사용해야 한다.)
+            List<Member> result1 = em.createQuery("SELECT m FROM MemberV7 m JOIN m.team t WHERE t.name = :teamName", Member.class)
+                    .setParameter("teamName", teamName)
+                    .getResultList();
+
+            assertEquals(members
+                    .stream()
+                    .filter(m -> m.getTeam().getName().equals(teamName))
+                    .collect(Collectors.toList()).size(), result1.size());
+
+            //LEFT (OUTER) JOIN
+            List<Member> result2 = em.createQuery("SELECT m FROM MemberV7 m LEFT JOIN m.team t ON t.name = :teamName", Member.class)
+                    .setParameter("teamName", teamName)
+                    .getResultList();
+
+            assertEquals(members.size(), result2.size());
+        });
+    }
+
+    @Test
+    @DisplayName("JPQL :: 페치 조인")
+    public void test7() {
+        pc.runTransaction((em, tx) -> {
+            //Fetch Join 은 JPQL 에서 성능 최적화를 위해 제공하는 기능
+            //연관된 엔티티나 컬렉션을 한 번에 같이 조회하는 기능
+            //[ LEFT [OUTER] | INNER ] JOIN FETCH 조인 경로
+
+            String teamName = "Team Alpha";
+
+            //엔티티 페치 조인
+            List<Member> result1 = em.createQuery("SELECT m FROM MemberV7 m " +
+                            "JOIN FETCH m.team t " +
+                            "WHERE t.name = :teamName", Member.class)
+                    .setParameter("teamName", teamName)
+                    .getResultList();
+
+            for(Member m : result1) {
+                //fetch join 으로 Team 이 Persistence Context 에 존재하므로 지연로딩 X
+                assertEquals(teamName, m.getTeam().getName());
+            }
+
+            //컬렉션 페치 조인 -> 일대다 인 경우 중복이 나올 수 있다(JPA 표준) -> JPA 표준은 그렇지만, 하이버네이트에서는 알아서 중복을 제거함
+            List<Team> team = em.createQuery("SELECT t FROM TeamV4 t JOIN FETCH t.members WHERE t.name = :teamName", Team.class)
+                    .setParameter("teamName", teamName)
+                    .getResultList();
+            int expected = members.stream()
+                    .filter(m -> m.getTeam().getName().equals(teamName))
+                    .collect(Collectors.toList()).size();
+            for(Team t : team) {
+                assertEquals(expected, t.getMembers().size());
+            }
+
+            //페치 조인의 한계
+            //1. 페치 조인 대상에는 별칭을 줄 수 없다. -> JPA 표준에서는 그렇지만 하이버네이트에서는 지원 -> 연관된 데이터 수가 달라져서 데이터 무결성이 깨질 수 있음
+            //2. 둘 이상의 컬렉션을 페치할 수 없다.
+            //3. 페치 조인하면 페이징 API를 사용할 수 없다. (단, 일대일, 다대일은 가능) -> batch fetch 나 2단계 조회 전략(먼저, 리스트 뽑고 각 항목별로 세부 쿼리 다시 실행)
+        });
+    }
+
+    @Test
+    @DisplayName("JPQL :: 경로 탐색")
+    public void test8() {
+        pc.runTransaction((em, tx) -> {
+            //경로 탐색 -> 묵시적 조인이 일어남(Member, Team, Product 3개 테이블 조인)
+            List<Team> team = em.createQuery("SELECT o.member.team " +
+                            "FROM OrderV2 o " +
+                            "WHERE o.product.name like 'Product-%' and o.address.city ='Seoul'", Team.class)
+                    .getResultList();
+
+
+            //컬렉션은 별칭을 얻어야 경로 탐색 가능
+            List<String> userNames = em.createQuery("SELECT m.username  FROM TeamV4 t JOIN t.members m", String.class)
+                    .getResultList();
+            assertTrue(userNames.size() > 0);
+
+            //경로 탐색을 사용한 묵시적 조인 시 주의사항
+            //1. 항상 내부 조인이다.
+            //2. 컬렉션은 별칭을 얻어야 세부 경로 탐색 가능
+            //3. 묵시적 조인은 한눈에 파악하기 어렵기에 되도록 명시적 조인 사용 권장
+        });
+
+    }
+
 
     @AfterAll
     public static void destroy() {
