@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/jpa-basic" />
+            <option value="$PROJECT_DIR$/spring-jpa-app" />
           </set>
         </option>
       </GradleProjectSettings>
