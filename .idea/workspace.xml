@@ -7,6 +7,7 @@
     <list default="true" id="d35a4848-0606-463a-b5ea-14a09ecb427a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa-basic/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/ch10/QueryDSLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/test/java/net/happykoo/jpa/ch10/QueryDSLTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +112,8 @@
       <command value="gradle runH2Server" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'net.happykoo.jpa'">
-    <configuration name="CriteriaTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.QueryDSLTest.test7">
+    <configuration name="QueryDSLTest.test3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -125,7 +126,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch10.CriteriaTest.test1&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch10.QueryDSLTest.test3&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -135,7 +136,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CriteriaTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QueryDSLTest.test4" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -148,7 +149,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch10.CriteriaTest.test2&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch10.QueryDSLTest.test4&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -158,7 +159,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CriteriaTest.test3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QueryDSLTest.test5" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -171,7 +172,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch10.CriteriaTest.test3&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch10.QueryDSLTest.test5&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -181,7 +182,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CriteriaTest.test4" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QueryDSLTest.test6" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,7 +195,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.ch10.CriteriaTest.test4&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch10.QueryDSLTest.test6&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -204,7 +205,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'net.happykoo.jpa'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="QueryDSLTest.test7" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -217,7 +218,7 @@
           <list>
             <option value=":jpa-basic:test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.jpa.*&quot;" />
+            <option value="&quot;net.happykoo.jpa.ch10.QueryDSLTest.test7&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -238,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'net.happykoo.jpa'" />
-        <item itemvalue="Gradle.CriteriaTest.test4" />
-        <item itemvalue="Gradle.CriteriaTest.test3" />
-        <item itemvalue="Gradle.CriteriaTest.test2" />
-        <item itemvalue="Gradle.CriteriaTest.test1" />
+        <item itemvalue="Gradle.QueryDSLTest.test7" />
+        <item itemvalue="Gradle.QueryDSLTest.test6" />
+        <item itemvalue="Gradle.QueryDSLTest.test5" />
+        <item itemvalue="Gradle.QueryDSLTest.test4" />
+        <item itemvalue="Gradle.QueryDSLTest.test3" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +255,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760323880789</updated>
-      <workItem from="1760323881943" duration="80255000" />
+      <workItem from="1760323881943" duration="87008000" />
     </task>
     <servers />
   </component>
