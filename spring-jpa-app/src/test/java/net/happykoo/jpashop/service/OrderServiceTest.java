@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -96,7 +98,33 @@ public class OrderServiceTest {
         assertEquals(OrderStatus.CANCEL, order.getStatus());
         //재고가 그대로여야 한다.
         assertEquals(100, item.getStockQuantity());
+    }
 
+    @Test
+    @DisplayName("상품 검색 테스트")
+    public void test4() {
+        int orderCount = 2;
 
+        Long orderId = orderService.order(member.getId(),
+                item.getId(),
+                orderCount);
+
+        List<Order> result1 = orderService.findOrders(OrderSearch.builder()
+                .orderStatus(OrderStatus.ORDER)
+                .build());
+
+        assertEquals(1, result1.size());
+
+        List<Order> result2 = orderService.findOrders(OrderSearch.builder()
+                .orderStatus(OrderStatus.CANCEL)
+                .build());
+
+        assertEquals(0, result2.size());
+
+        List<Order> result3 = orderService.findOrders(OrderSearch.builder()
+                .memberName("happy")
+                .build());
+
+        assertEquals(1, result3.size());
     }
 }

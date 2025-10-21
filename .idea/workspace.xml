@@ -6,33 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d35a4848-0606-463a-b5ea-14a09ecb427a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch9/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch9/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/constant/DeliveryStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/constant/OrderStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Album.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/BaseEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Delivery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/OrderItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/example/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/config/JpaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Delivery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/test/java/net/happykoo/jpashop/service/OrderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/test/java/net/happykoo/jpashop/service/OrderServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +91,7 @@
       <command value="gradle clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.OrderServiceTest.test3">
+  <component name="RunManager" selected="Gradle.OrderServiceTest.test4">
     <configuration name="MemberServiceTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -210,7 +184,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="jpa-programming [clean install]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderServiceTest.test4" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -221,13 +195,14 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
-            <option value="install" />
+            <option value=":spring-jpa-app:test" />
+            <option value="--tests" />
+            <option value="&quot;net.happykoo.jpashop.service.OrderServiceTest.test4&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -259,16 +234,16 @@
       <item itemvalue="Gradle.OrderServiceTest.test1" />
       <item itemvalue="Gradle.OrderServiceTest.test2" />
       <item itemvalue="Gradle.OrderServiceTest.test3" />
-      <item itemvalue="Gradle.jpa-programming [clean install]" />
+      <item itemvalue="Gradle.OrderServiceTest.test4" />
       <item itemvalue="Spring Boot.JpaShopApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrderServiceTest.test4" />
         <item itemvalue="Gradle.OrderServiceTest.test3" />
         <item itemvalue="Gradle.OrderServiceTest.test2" />
         <item itemvalue="Gradle.OrderServiceTest.test1" />
         <item itemvalue="Gradle.MemberServiceTest.test1" />
-        <item itemvalue="Gradle.jpa-programming [clean install]" />
       </list>
     </recent_temporary>
   </component>
@@ -280,7 +255,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760323880789</updated>
-      <workItem from="1760323881943" duration="106049000" />
+      <workItem from="1760323881943" duration="106556000" />
     </task>
     <servers />
   </component>
