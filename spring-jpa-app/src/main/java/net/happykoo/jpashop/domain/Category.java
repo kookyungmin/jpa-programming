@@ -7,10 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
 public class Category {
     @Id @GeneratedValue
     @Column(name = "CATEGORY_ID")
@@ -18,16 +16,20 @@ public class Category {
 
     private String name;
 
+    @Builder
+    public Category(String name) {
+        this.name = name;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_ID")
+    @Setter
     private Category parent;
 
     @OneToMany(mappedBy = "parent")
-    @Builder.Default
     private List<Category> children = new ArrayList<>();
 
-    @ManyToMany(mappedBy = "category")
-    @Builder.Default
+    @ManyToMany(mappedBy = "categories")
     private List<Item> items = new ArrayList<>();
 
     //연관관계 메서드

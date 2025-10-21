@@ -7,11 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-@Setter
 public class Member {
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")
@@ -19,10 +16,15 @@ public class Member {
 
     private String name;
 
+    @Builder
+    public Member(String name, Address address) {
+        this.name = name;
+        this.address = address;
+    }
+
     @Embedded
     private Address address;
 
     @OneToMany(mappedBy = "member")
-    @Builder.Default
     private List<Order> orders = new ArrayList<>();
 }

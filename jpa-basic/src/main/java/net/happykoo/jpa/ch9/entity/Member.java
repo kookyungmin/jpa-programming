@@ -47,9 +47,11 @@ public class Member {
     @CollectionTable(name = "FAVORITE_FOODS",
             joinColumns = @JoinColumn(name = "MEMBER_ID"))
     @Column(name = "FOOD_NAME")
+    @Builder.Default
     private Set<String> favoriteFoods = new HashSet<>();
 
     @ElementCollection
     @CollectionTable(name = "ADDRESS", joinColumns = @JoinColumn(name = "MEMBER_ID"))
+    @Builder.Default
     private List<Address> addressHistory = new ArrayList<>();
 }
