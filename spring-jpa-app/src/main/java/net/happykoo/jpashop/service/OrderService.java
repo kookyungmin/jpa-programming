@@ -20,8 +20,8 @@ public class OrderService {
 
     //주문
     public Long order(Long memberId, Long itemId, int count) {
-        Member member = memberRepository.findOne(memberId);
-        Item item = itemRepository.findOne(itemId);
+        Member member = memberRepository.findById(memberId).orElseThrow();
+        Item item = itemRepository.findById(itemId).orElseThrow();
 
         //배송정보 생성
         Delivery delivery = Delivery.builder()
@@ -46,15 +46,20 @@ public class OrderService {
     }
 
     public void cancelOrder(Long orderId) {
-        Order order = orderRepository.findOne(orderId);
-        order.cancel();
+        orderRepository.findById(orderId).ifPresent(order -> order.cancel());
     }
 
     public Order findOrder(Long id) {
-        return orderRepository.findOne(id);
+        return orderRepository.findById(id).orElse(null);
     }
 
+    //Specification 사용한 버전
+    public List<Order> findOrders(OrderSearchSpecification orderSearch) {
+        return orderRepository.findAll(orderSearch.toSpecification());
+    }
+
+    //QueryDSL 사용한 버전
     public List<Order> findOrders(OrderSearch orderSearch) {
-        return orderRepository.findAll(orderSearch);
+        return orderRepository.search(orderSearch);
     }
 }

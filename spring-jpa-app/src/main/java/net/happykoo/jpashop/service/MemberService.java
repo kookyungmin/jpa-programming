@@ -25,7 +25,8 @@ public class MemberService {
     }
 
     public Member findOne(Long memberId) {
-        return repository.findOne(memberId);
+        return repository.findById(memberId)
+                .orElse(null);
     }
 
     private void validateDuplicateMember(Member member) {

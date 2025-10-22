@@ -3,6 +3,7 @@ package net.happykoo.jpashop.service;
 import lombok.RequiredArgsConstructor;
 import net.happykoo.jpashop.domain.Item;
 import net.happykoo.jpashop.repository.ItemRepository;
+import net.happykoo.jpashop.repository.old.OldItemRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +24,7 @@ public class ItemService {
     }
 
     public Item findOne(Long itemId) {
-        return repository.findOne(itemId);
+        return repository.findById(itemId)
+                .orElse(null);
     }
 }
