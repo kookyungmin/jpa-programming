@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d35a4848-0606-463a-b5ea-14a09ecb427a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/OrderSearchSpecification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/config/JpaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/domain/OrderSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/repository/old/OldItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/repository/old/OldMemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/repository/old/OldOrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/java/net/happykoo/jpashop/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/test/java/net/happykoo/jpashop/service/MemberServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/test/java/net/happykoo/jpashop/service/MemberServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-jpa-app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jpa-app/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +97,7 @@
       <command value="gradle clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.OrderServiceTest.test4">
+  <component name="RunManager" selected="Gradle.Tests in 'net.happykoo.jpashop.service'">
     <configuration name="MemberServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -253,9 +245,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'net.happykoo.jpashop.service'" />
         <item itemvalue="Gradle.OrderServiceTest.test4" />
         <item itemvalue="Gradle.MemberServiceTest.test1" />
-        <item itemvalue="Gradle.Tests in 'net.happykoo.jpashop.service'" />
         <item itemvalue="Gradle.MemberServiceTest" />
         <item itemvalue="Gradle.OrderServiceTest.test3" />
       </list>
@@ -269,7 +261,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760323880789</updated>
-      <workItem from="1760323881943" duration="110978000" />
+      <workItem from="1760323881943" duration="112332000" />
     </task>
     <servers />
   </component>
