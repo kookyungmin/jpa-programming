@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d35a4848-0606-463a-b5ea-14a09ecb427a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch8/entity/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch8/entity/Child.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch8/entity/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch8/entity/Parent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch14/entity/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa-basic/src/main/java/net/happykoo/jpa/ch14/entity/Child.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +96,7 @@
       <command value="gradle clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CollectionTest (1)">
+  <component name="RunManager" selected="Gradle.CollectionTest.test1 (1)">
     <configuration name="CollectionTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -145,6 +143,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CollectionTest.test1 (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jpa-basic:test" />
+            <option value="--tests" />
+            <option value="&quot;net.happykoo.jpa.ch14.CollectionTest.test1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CollectionTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -159,29 +180,6 @@
             <option value=":spring-jpa-app:test" />
             <option value="--tests" />
             <option value="&quot;net.happykoo.jpashop.service.CollectionTest.test1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="OrderServiceTest.test4" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":spring-jpa-app:test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.jpashop.service.OrderServiceTest.test4&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -240,17 +238,17 @@
       <item itemvalue="Gradle.CollectionTest" />
       <item itemvalue="Gradle.CollectionTest (1)" />
       <item itemvalue="Gradle.CollectionTest.test1" />
-      <item itemvalue="Gradle.OrderServiceTest.test4" />
+      <item itemvalue="Gradle.CollectionTest.test1 (1)" />
       <item itemvalue="Gradle.Tests in 'net.happykoo.jpashop.service'" />
       <item itemvalue="Spring Boot.JpaShopApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CollectionTest.test1 (1)" />
         <item itemvalue="Gradle.CollectionTest (1)" />
         <item itemvalue="Gradle.CollectionTest" />
         <item itemvalue="Gradle.CollectionTest.test1" />
         <item itemvalue="Gradle.Tests in 'net.happykoo.jpashop.service'" />
-        <item itemvalue="Gradle.OrderServiceTest.test4" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +260,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760323880789</updated>
-      <workItem from="1760323881943" duration="117017000" />
+      <workItem from="1760323881943" duration="117763000" />
     </task>
     <servers />
   </component>

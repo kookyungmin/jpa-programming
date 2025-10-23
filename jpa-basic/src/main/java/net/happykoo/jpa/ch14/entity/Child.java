@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import net.happykoo.jpa.ch14.converter.BooleanToYNConverter;
+import net.happykoo.jpa.ch14.listener.ChildListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@EntityListeners(ChildListener.class)
 public class Child {
     @Id
     @GeneratedValue
