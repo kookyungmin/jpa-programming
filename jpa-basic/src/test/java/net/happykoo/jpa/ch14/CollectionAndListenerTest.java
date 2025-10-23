@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Slf4j
-public class CollectionTest {
+public class CollectionAndListenerTest {
     @Test
     @DisplayName("List, Collection 은 PersistentBag")
     public void test1() {
@@ -25,6 +25,7 @@ public class CollectionTest {
                         .name("marco")
                         .build();
 
+                //ChildListener PrePersist, PostPersist 실행됨
                 em.persist(child);
 
                 assertEquals(PersistentBag.class, child.getOrders().getClass());

@@ -18,6 +18,10 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @EntityListeners(ChildListener.class)
+//Child.withParent 쿼리 실행시 parent도 같이 fetch join (fetch join은 JPQL을 사용해야하지만, entity graph는 JPQL 사용 X)
+@NamedEntityGraph(name = "Child.withParent", attributeNodes = {
+    @NamedAttributeNode("parent")
+})
 public class Child {
     @Id
     @GeneratedValue
