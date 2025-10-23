@@ -16,6 +16,6 @@ public class ChildListener {
     @PostPersist
     public void postPersist(Object obj) {
         Child child = (Child) obj;
-        log.info("###### {} : {}", child.getId(), child.getName());
+        log.info("###### id {} : {}", child.getId(), child.getName());
     }
 }
