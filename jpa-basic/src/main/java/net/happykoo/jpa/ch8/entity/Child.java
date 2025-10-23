@@ -3,7 +3,8 @@ package net.happykoo.jpa.ch8.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
+@Entity(name = "ChildV1")
+@Table(name = "V1_CHILD")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

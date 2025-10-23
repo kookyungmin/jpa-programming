@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Entity
+@Entity(name = "ParentV1")
+@Table(name = "V1_PARENT")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

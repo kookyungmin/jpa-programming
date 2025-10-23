@@ -28,6 +28,10 @@
         <class>net.happykoo.jpa.ch10.entity.Team</class>
         <class>net.happykoo.jpa.ch10.entity.Order</class>
         <class>net.happykoo.jpa.ch10.entity.Product</class>
+        <class>net.happykoo.jpa.ch14.entity.Child</class>
+        <class>net.happykoo.jpa.ch14.entity.Teacher</class>
+        <class>net.happykoo.jpa.ch14.entity.Parent</class>
+        <class>net.happykoo.jpa.ch14.entity.Order</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
