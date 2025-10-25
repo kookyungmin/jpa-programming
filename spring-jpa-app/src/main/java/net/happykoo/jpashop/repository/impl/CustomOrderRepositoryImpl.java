@@ -8,10 +8,13 @@ import net.happykoo.jpashop.domain.OrderSearch;
 import net.happykoo.jpashop.domain.QOrder;
 import net.happykoo.jpashop.repository.CustomOrderRepository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import java.util.List;
 
 @RequiredArgsConstructor
 public class CustomOrderRepositoryImpl implements CustomOrderRepository {
+    private final EntityManagerFactory emf;
     private final JPAQueryFactory query;
 
     @Override
@@ -33,5 +36,13 @@ public class CustomOrderRepositoryImpl implements CustomOrderRepository {
                 .offset(0)
                 .limit(1000)
                 .fetch();
+    }
+
+    @Override
+    public Order findSingleOrder() {
+        //스프링 예외 변환 테스트
+        EntityManager em = emf.createEntityManager();
+        return em.createQuery("select o from Order o", Order.class)
+                .getSingleResult();
     }
 }

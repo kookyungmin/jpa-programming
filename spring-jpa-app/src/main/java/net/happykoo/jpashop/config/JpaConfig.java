@@ -72,4 +72,10 @@ public class JpaConfig {
     public JPAQueryFactory jpaQueryFactory(EntityManager em) {
         return new JPAQueryFactory(em);
     }
+
+    //JPA 예외를 스프링 프레임워크가 제공하는 추상화된 예외로 변경
+    @Bean
+    public PersistenceExceptionTranslationPostProcessor exceptionTranslationPostProcessor() {
+        return new PersistenceExceptionTranslationPostProcessor();
+    }
 }
