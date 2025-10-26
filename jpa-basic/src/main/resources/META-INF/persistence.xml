@@ -32,6 +32,7 @@
         <class>net.happykoo.jpa.ch14.entity.Teacher</class>
         <class>net.happykoo.jpa.ch14.entity.Parent</class>
         <class>net.happykoo.jpa.ch14.entity.Order</class>
+        <class>net.happykoo.jpa.ch16.entity.Reply</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>

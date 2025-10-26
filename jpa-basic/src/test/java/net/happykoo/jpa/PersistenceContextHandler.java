@@ -43,7 +43,7 @@ public class PersistenceContextHandler implements AutoCloseable {
             if (tx != null && tx.isActive()) {
                 tx.rollback();
             }
-            throw new RuntimeException(e.getMessage());
+            throw e;
         } finally {
             if (em.isOpen()) {
                 em.close();
